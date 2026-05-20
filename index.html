@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Hot | الفطيرة الساخنة - Premium Pizza Experience</title>
+    <meta name="description"
+        content="Experience the finest pizzas at Pizza Hot. Fresh ingredients, handmade crust, professional taste. | استمتع بأفضل البيتزا في الفطيرة الساخنة. مكونات طازجة، عجينة يدوية، طعم احترافي.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;1,400&family=Karla:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <header class="nav-header">
+        <div class="container nav-container">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Pizza Hot Logo" class="nav-logo">
+                <span class="logo-text" data-ar="الفطيرة الساخنة" data-en="Pizza Hot">الفطيرة الساخنة</span>
+            </div>
+            <div class="lang-switcher">
+                <button class="location-shortcut" id="headerLocationBtn" title="Show Location">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                        <path
+                            d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                    </svg>
+                </button>
+                <button class="lang-btn active" data-lang="ar">العربية</button>
+                <button class="lang-btn" data-lang="en">English</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Pro Pizza Scroll Interaction Section -->
+        <section class="pizza-scroll-container">
+            <div class="sticky-wrapper">
+                <div class="pizza-animation-box" id="pizzaAnimationBox">
+                    <canvas id="pizzaCanvas" width="1076" height="720"></canvas>
+
+
+
+                    <!-- Side Marketing Pills -->
+                    <div class="side-pill left" id="sidePillLeft">
+                        <span data-ar="طعم البيتزا الحقيقي" data-en="The Real Taste">طعم البيتزا الحقيقي</span>
+                    </div>
+
+                    <div class="side-pill right" id="sidePillRight">
+                        <span data-ar="لذيذٌ ومخبوزٌ بإتقان" data-en="Delicious & Backed Perfect">
+                            لذيذ ومخبوز باتقان
+                        </span>
+                    </div>
+
+                    <div class="steam-container">
+                        <div class="steam-particle"></div>
+                        <div class="steam-particle"></div>
+                        <div class="steam-particle"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="menu-section">
+            <div class="floating-bg" id="floatingBg"></div>
+            <div class="container">
+                <!-- Filter Tabs -->
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-category="all" data-ar="الكل" data-en="All">الكل</button>
+                    <button class="filter-tab" data-category="vegetables" data-ar="خضار"
+                        data-en="Vegetables">خضار</button>
+                    <button class="filter-tab" data-category="chicken" data-ar="دجاج" data-en="Chicken">دجاج</button>
+                    <button class="filter-tab" data-category="hot_meats" data-ar="لحوم ساخنة" data-en="Hot Meats">لحوم
+                        ساخنة</button>
+                    <button class="filter-tab" data-category="cold_meats" data-ar="لحوم باردة" data-en="Cold Meats">لحوم
+                        باردة</button>
+                    <button class="filter-tab" data-category="choice" data-ar="اختيارك"
+                        data-en="Your Choice">اختيارك</button>
+                    <button class="filter-tab" data-category="appetizers" data-ar="مقبلات"
+                        data-en="Appetizers">مقبلات</button>
+                    <button class="filter-tab" data-category="salads" data-ar="سلطات" data-en="Salads">سلطات</button>
+                    <button class="filter-tab" data-category="sauces" data-ar="صوصات" data-en="Sauces">صوصات</button>
+                    <button class="filter-tab" data-category="drinks" data-ar="مشروبات"
+                        data-en="Drinks">مشروبات</button>
+                </div>
+
+                <!-- Pizza Grid -->
+                <div class="pizza-grid" id="pizzaGrid">
+                    <!-- Pizzas will be dynamically generated by app.js -->
+                </div>
+            </div>
+        </section>
+        <!-- Location and Contact Section -->
+        <section class="contact-section" id="location">
+            <div class="container">
+                <div class="category-group-header animate-fade-in">
+                    <h2 data-ar="موقعنا وتواصل معنا" data-en="Location & Contact">موقعنا وتواصل معنا</h2>
+                    <div class="header-line"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Map Container -->
+                    <div class="map-card animate-fade-in">
+                        <div class="map-wrapper">
+                            <iframe id="contactMap" class="contact-iframe"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6653.074670898194!2d36.274720239021704!3d33.513412554802834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1518e74d1f8f9b4b%3A0xc0f494ee8cb65f84!2sPizza%20hot!5e0!3m2!1sen!2sin!4v1773497156508!5m2!1sen!2sin"
+                                width="100%" height="450" allowfullscreen="" loading="lazy"
+                                title="Pizza Hot Restaurant Location">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Contact Actions -->
+                    <div class="contact-actions animate-fade-in">
+                        <div class="action-card branch-list-card">
+                            <div class="action-icon">
+                                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                </svg>
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                    <path
+                                        d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                                </svg>
+                            </div>
+                            <h3 data-ar="فروعنا" data-en="Our Branches">فروعنا</h3>
+
+                            <div class="branches-container">
+                                <!-- Malki Branch -->
+                                <div class="branch-item active" id="branch-malki" onclick="switchBranch('malki')">
+                                    <div class="branch-info">
+                                        <h4 data-ar="المالكي" data-en="Malki">المالكي</h4>
+                                        <div class="phone-numbers">
+                                            <a href="tel:0113738964">011 3738964</a>
+                                            <a href="tel:0113738965">011 3738965</a>
+                                        </div>
+                                    </div>
+                                    <div class="branch-actions">
+                                        <button class="branch-map-btn" onclick="switchBranch('malki')"
+                                            title="Show on Map">
+                                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                                <path
+                                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                            </svg>
+                                        </button>
+                                        <a href="tel:0113738964" class="branch-call-btn">
+                                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                                <path
+                                                    d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.56c.27-.28.35-.67.24-1.02-1.12-1.12-1.32-2.31-1.32-3.54 0-.54-.45-.99-1-.99H4.19C3.65 3 3.2 3.45 3.2 4c0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.62c0-.55-.45-1-1-1z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Kafarsuseh Branch -->
+                                <div class="branch-item" id="branch-kafarsuseh" onclick="switchBranch('kafarsuseh')">
+                                    <div class="branch-info">
+                                        <h4 data-ar="كفرسوسة" data-en="Kafarsuseh">كفرسوسة</h4>
+                                        <div class="phone-numbers">
+                                            <a href="tel:0115014">011 5014</a>
+                                        </div>
+                                    </div>
+                                    <div class="branch-actions">
+                                        <button class="branch-map-btn" onclick="switchBranch('kafarsuseh')"
+                                            title="Show on Map">
+                                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                                <path
+                                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                            </svg>
+                                        </button>
+                                        <a href="tel:0115014" class="branch-call-btn">
+                                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                                <path
+                                                    d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.56c.27-.28.35-.67.24-1.02-1.12-1.12-1.32-2.31-1.32-3.54 0-.54-.45-.99-1-.99H4.19C3.65 3 3.2 3.45 3.2 4c0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.62c0-.55-.45-1-1-1z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <!-- Midan Branch -->
+                                <div class="branch-item" id="branch-midan" onclick="switchBranch('midan')">
+                                    <div class="branch-info">
+                                        <h4 data-ar="الميدان" data-en="Midan">الميدان</h4>
+                                        <div class="phone-numbers">
+                                            <a href="tel:0119532">011 9532</a>
+                                        </div>
+                                    </div>
+                                    <div class="branch-actions">
+                                        <button class="branch-map-btn" onclick="switchBranch('midan')"
+                                            title="Show on Map">
+                                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                                <path
+                                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                            </svg>
+                                        </button>
+                                        <a href="tel:0119532" class="branch-call-btn">
+                                            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                                <path
+                                                    d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.56c.27-.28.35-.67.24-1.02-1.12-1.12-1.32-2.31-1.32-3.54 0-.54-.45-.99-1-.99H4.19C3.65 3 3.2 3.45 3.2 4c0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.62c0-.55-.45-1-1-1z" />
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="action-card">
+                            <div class="action-icon">
+                                <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                                    <path
+                                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                                </svg>
+                            </div>
+                            <h3 data-ar="📍 اذهب إلى المطعم عبر Google Maps" data-en="Go to Restaurant via Google Maps">
+                                📍 اذهب إلى المطعم عبر Google Maps</h3>
+                            <button class="btn-action primary" onclick="getDirections()">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                                    <path
+                                        d="M21.71 11.29l-9-9a.996.996 0 00-1.41 0l-9 9a.996.996 0 000 1.41l9 9c.39.39 1.02.39 1.41 0l9-9a.996.996 0 000-1.41zM14 14.5V12h-4v3H8v-4c0-.55.45-1 1-1h5V7.5L18.5 11 14 14.5z" />
+                                </svg>
+                                <span data-ar="فتح في الخرائط" data-en="Open in Maps">فتح في الخرائط</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Details Modal -->
+    <div class="modal-overlay" id="pizzaModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <div class="modal-grid">
+                <div class="modal-image-box">
+                    <img id="modalPizzaImg" alt="Pizza Photo" class="pizza-img">
+                </div>
+                <div class="modal-body">
+                    <h2 id="modalPizzaName" class="modal-title"></h2>
+                    <p id="modalPizzaDesc" class="pizza-desc"></p>
+                    <div class="price-section">
+                        <span class="modal-info-label" data-ar="السعر" data-en="Price">السعر</span>
+                        <div id="modalPizzaPrice" class="modal-price-tag"></div>
+                    </div>
+                    <div id="modalPizzaCrust" class="crust-section"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/framer-motion@12/dist/dom.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
