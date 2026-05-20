@@ -14,7 +14,7 @@ const menuData = [
     name_en: "Four Seasons",
     desc_ar: "فليفلة، بندورة، زيتون، فطر",
     desc_en: "Peppers, Tomatoes, Olives, Mushrooms",
-    prices: { small: 600, medium: 850, large: 1200 },
+    prices: { xsmall: "--", small: 600, medium: 850, large: 1200 },
     image: "images/pizzas/فصول.jpg"
   },
   {
@@ -24,7 +24,7 @@ const menuData = [
     name_en: "Mushroom",
     desc_ar: "صوص، جبنة، فطر",
     desc_en: "Sauce, Cheese, Mushroom",
-    prices: { small: 600, medium: 850, large: 1200 },
+    prices: { xsmall: "--", small: 600, medium: 850, large: 1200 },
     image: "images/pizzas/mushroom.png"
   },
   {
@@ -34,7 +34,7 @@ const menuData = [
     name_en: "Corn",
     desc_ar: "صوص، جبنة، ذرة",
     desc_en: "Sauce, Cheese, Corn",
-    prices: { small: 600, medium: 850, large: 1200 },
+    prices: { xsmall: "--", small: 600, medium: 850, large: 1200 },
     image: "images/pizzas/ذرة.jpg"
   },
   {
@@ -44,7 +44,7 @@ const menuData = [
     name_en: "Margherita",
     desc_ar: "صوص، جبنة",
     desc_en: "Sauce, Cheese",
-    prices: { small: 600, medium: 850, large: 1200 },
+    prices: { xsmall: "--", small: 600, medium: 850, large: 1200 },
     image: "images/pizzas/مرغريتا.jpg"
   },
   {
@@ -54,7 +54,7 @@ const menuData = [
     name_en: "Four Cheese",
     desc_ar: "أربع أنواع جبنة (بلو تشيز، بارميزان، تشيدر، موزاريلا)",
     desc_en: "Four types of cheese (Blue cheese, Parmesan, Cheddar, Mozzarella)",
-    prices: { small: 750, medium: 1100, large: 1500 },
+    prices: { xsmall: "--", small: 750, medium: 1100, large: 1500 },
     image: "images/pizzas/فورتشيز.jpg"
   },
 
@@ -66,7 +66,7 @@ const menuData = [
     name_en: "Shish Taouk",
     desc_ar: "صوص، جبنة، شيش طاووق",
     desc_en: "Sauce, Cheese, Shish Taouk",
-    prices: { small: 750, medium: 1100, large: 1500 },
+    prices: { xsmall: "--", small: 750, medium: 1100, large: 1500 },
     image: "images/pizzas/شيش.jpg"
   },
   {
@@ -76,7 +76,7 @@ const menuData = [
     name_en: "BBQ",
     desc_ar: "صوص الباربيكيو، جبنة، قطع دجاج، فطر",
     desc_en: "BBQ Sauce, Cheese, Chicken chunks, Mushroooms",
-    prices: { small: 750, medium: 1100, large: 1500 },
+    prices: { xsmall: "--", small: 750, medium: 1100, large: 1500 },
     image: "images/pizzas/باربكيو.jpg"
   },
   {
@@ -86,7 +86,7 @@ const menuData = [
     name_en: "Mexican",
     desc_ar: "صوص، جبنة، قطع دجاج حارة، فليفلة، بصل، بهارات مكسيكي",
     desc_en: "Sauce, Cheese, Spicy chicken, Peppers, Onions, Mexican spices",
-    prices: { small: 750, medium: 1100, large: 1500 },
+    prices: { xsmall: "--", small: 750, medium: 1100, large: 1500 },
     image: "images/pizzas/مكسيكي.jpg"
   },
   {
@@ -96,7 +96,7 @@ const menuData = [
     name_en: "Ranch (Normal or Spicy)",
     desc_ar: "صوص الرانش، جبنة، قطع دجاج، حبش مدخن",
     desc_en: "Ranch Sauce, Cheese, Chicken chunks, Smoked Turkey",
-    prices: { small: 750, medium: 1100, large: 1500 },
+    prices: { xsmall: "--", small: 750, medium: 1100, large: 1500 },
     image: "images/pizzas/ranch pizza.png"
   },
 
@@ -108,7 +108,7 @@ const menuData = [
     name_en: "Sausage",
     desc_ar: "صوص، جبنة، فطر، سجق",
     desc_en: "Sauce, Cheese, Mushroom, Sausage",
-    prices: { small: 750, medium: 1100, large: 1500 },
+    prices: { xsmall: "--", small: 750, medium: 1100, large: 1500 },
     image: "images/pizzas/سجق.jpg"
   },
   {
@@ -118,7 +118,7 @@ const menuData = [
     name_en: "Philadelphia Steak",
     desc_ar: "صوص الفيلادلفيا، جبنة، بصل، شرائح لحمة، فطر فريش، فليفلة",
     desc_en: "Philadelphia Sauce, Cheese, Onion, Meat slices, Fresh Mushroom, Peppers",
-    prices: { small: 750, medium: 1100, large: 1500 },
+    prices: { xsmall: "--", small: 750, medium: 1100, large: 1500 },
     image: "images/pizzas/philadelphia.png"
   },
   {
@@ -128,7 +128,7 @@ const menuData = [
     name_en: "Supreme",
     desc_ar: "صوص، جبنة، لحم مفروم، بيبيروني، فطر، فليفلة، زيتون",
     desc_en: "Sauce, Cheese, Minced meat, Pepperoni, Mushroom, Peppers, Olives",
-    prices: { small: 750, medium: 1100, large: 1500 },
+    prices: { xsmall: "--", small: 750, medium: 1100, large: 1500 },
     image: "images/pizzas/سوبريم.jpg"
   },
 
@@ -140,7 +140,7 @@ const menuData = [
     name_en: "Salami",
     desc_ar: "صوص، جبنة، سلامي",
     desc_en: "Sauce, Cheese, Salami",
-    prices: { small: 700, medium: 1050, large: 1400 },
+    prices: { xsmall: "--", small: 700, medium: 1050, large: 1400 },
     image: "images/pizzas/سلامي.jpg"
   },
   {
@@ -150,7 +150,7 @@ const menuData = [
     name_en: "Pepperoni",
     desc_ar: "صوص، جبنة، بيبيروني",
     desc_en: "Sauce, Cheese, Pepperoni",
-    prices: { small: 700, medium: 1050, large: 1400 },
+    prices: { xsmall: "--", small: 700, medium: 1050, large: 1400 },
     image: "images/pizzas/ببروني.jpg"
   },
   {
@@ -160,7 +160,7 @@ const menuData = [
     name_en: "Hot Dog",
     desc_ar: "صوص، جبنة، هوت دوغ",
     desc_en: "Sauce, Cheese, Hot Dog",
-    prices: { small: 700, medium: 1050, large: 1400 },
+    prices: { xsmall: "--", small: 700, medium: 1050, large: 1400 },
     image: "images/pizzas/هةت دوغ.jpg"
   },
   {
@@ -170,7 +170,7 @@ const menuData = [
     name_en: "Smoked Turkey",
     desc_ar: "صوص، جبنة، حبش مدخن",
     desc_en: "Sauce, Cheese, Smoked Turkey",
-    prices: { small: 700, medium: 1050, large: 1400 },
+    prices: { xsmall: "--", small: 700, medium: 1050, large: 1400 },
     image: "images/pizzas/حبش.jpg"
   },
   {
@@ -180,7 +180,7 @@ const menuData = [
     name_en: "Smoked Beef Roast",
     desc_ar: "صوص، جبنة، روستو بقر",
     desc_en: "Sauce, Cheese, Smoked Beef Roast",
-    prices: { small: 700, medium: 1050, large: 1400 },
+    prices: { xsmall: "--", small: 700, medium: 1050, large: 1400 },
     image: "images/pizzas/سلامي.jpg"
   },
   {
@@ -190,7 +190,7 @@ const menuData = [
     name_en: "Mixed Cold Meats",
     desc_ar: "صوص، جبنة، سلامي، بيبيروني، هوت دوغ، حبش مدخن",
     desc_en: "Sauce, Cheese, Salami, Pepperoni, Hot Dog, Smoked Turkey",
-    prices: { small: 800, medium: 1200, large: 1600 },
+    prices: { xsmall: "--", small: 800, medium: 1200, large: 1600 },
     image: "images/pizzas/لحومات باردة.jpg"
   },
 
@@ -202,7 +202,7 @@ const menuData = [
     name_en: "Half and Half Pizza",
     desc_ar: "حسب الطلب",
     desc_en: "As per order",
-    prices: { small: 750, medium: 1100, large: 1500 },
+    prices: { xsmall: "--", small: 750, medium: 1100, large: 1500 },
     image: "images/pizzas/مشكلة.jpg"
   },
   {
@@ -212,7 +212,7 @@ const menuData = [
     name_en: "Third and Third Pizza",
     desc_ar: "صوص، جبنة، هوت دوغ، شيش، سجق",
     desc_en: "Sauce, Cheese, Hot Dog, Shish, Sausage",
-    prices: { small: 800, medium: 1200, large: 1600 },
+    prices: { xsmall: "--", small: 800, medium: 1200, large: 1600 },
     image: "images/pizzas/كل تلت شكل.jpg"
   },
   {
@@ -222,7 +222,7 @@ const menuData = [
     name_en: "Quarter and Quarter Pizza",
     desc_ar: "صوص، جبنة، هوت دوغ، حبش، بيبيروني، ذرة",
     desc_en: "Sauce, Cheese, Hot Dog, Turkey, Pepperoni, Corn",
-    prices: { small: 800, medium: 1200, large: 1600 },
+    prices: { xsmall: "--", small: 800, medium: 1200, large: 1600 },
     image: "images/pizzas/مشكلة.jpg"
   },
   {
@@ -232,7 +232,7 @@ const menuData = [
     name_en: "Hot Meats (Third and Third)",
     desc_ar: "حسب الطلب",
     desc_en: "As per order",
-    prices: { small: 850, medium: 1300, large: 1700 },
+    prices: { xsmall: "--", small: 850, medium: 1300, large: 1700 },
     image: "images/pizzas/كل تلت شكل.jpg"
   },
 
@@ -266,6 +266,16 @@ const menuData = [
     desc_en: "Fried potatoes",
     price: 300,
     image: "images/pizzas/بطاطا.JPG"
+  },
+  {
+    id: 36,
+    category: "appetizers",
+    name_ar: "خبز بالتوم",
+    name_en: "Garlic Bread",
+    desc_ar: "خبز طازج محمص مع زبدة الثوم والأعشاب.",
+    desc_en: "Fresh bread baked with garlic butter and herbs.",
+    price: "--",
+    image: "images/pizzas/garlic-bread.jpg"
   },
 
   // -- Salads --
@@ -381,10 +391,10 @@ let currentCategory = 'all';
 let categoryObserver = null;
 
 const categoryConfig = {
-  vegetables: { ar: "بيتزا الخضار", en: "Vegetables pizza" },
-  chicken: { ar: "بيتزا الدجاج", en: "Chicken pizza" },
-  hot_meats: { ar: "بيتزا اللحومات الساخنة", en: "Hot Meats pizza" },
-  cold_meats: { ar: "بيتزا اللحومات الباردة", en: "Cold Meats pizza" },
+  vegetables: { ar: "بيتزا الخضار", en: "Vegetables" },
+  chicken: { ar: "بيتزا الدجاج", en: "Chicken" },
+  hot_meats: { ar: "بيتزا اللحومات الساخنة", en: "Hot Meats" },
+  cold_meats: { ar: "بيتزا اللحومات الباردة", en: "Cold Meats" },
   choice: { ar: "بيتزا حسب الطلب", en: "Choice Pizza" },
   appetizers: { ar: "المقبلات", en: "Appetizers" },
   salads: { ar: "السلطات", en: "Salads" },
@@ -402,8 +412,9 @@ const closeModal = document.getElementById('closeModal');
 /**
  * Format price with thousands separator
  */
-function formatPrice(num) {
-  return new Intl.NumberFormat().format(num);
+function formatPrice(val) {
+  if (val === '--') return '--';
+  return new Intl.NumberFormat().format(val);
 }
 
 /**
@@ -422,7 +433,8 @@ function setupFloatingBackground() {
   const container = document.getElementById('floatingBg');
   if (!container) return;
 
-  const count = 60; // 50+ as requested
+  const isMobile = window.innerWidth < 768;
+  const count = isMobile ? 12 : 25;
   const fragments = document.createDocumentFragment();
 
   for (let i = 0; i < count; i++) {
@@ -496,8 +508,16 @@ function renderPizzas() {
 
       let priceDisplay = '';
       if (item.prices) {
-        const minPrice = item.prices.small;
-        priceDisplay = currentLang === 'ar' ? `بدءاً من ${formatPrice(minPrice)}` : `From ${formatPrice(minPrice)}`;
+        const sizeOrder = ['xsmall', 'small', 'medium', 'large', 'xlarge'];
+        let minPrice = null;
+        for (const sz of sizeOrder) {
+          if (item.prices[sz] !== undefined && item.prices[sz] !== '--') {
+            minPrice = item.prices[sz];
+            break;
+          }
+        }
+        const fromLabel = currentLang === 'ar' ? 'بدءاً من' : 'From';
+        priceDisplay = minPrice !== null ? `${fromLabel} ${formatPrice(minPrice)}` : '--';
       } else {
         priceDisplay = formatPrice(item.price);
       }
@@ -547,6 +567,20 @@ window.openItemDetails = function (id) {
   crustContainer.innerHTML = '';
 
   function getPriceHtml(price) {
+    if (price === '--') {
+      return `
+        <div class="dual-price-wrapper">
+          <div class="price-box new">
+            <span class="price-label">${currentLang === 'ar' ? 'السعر الجديد' : 'New SYP'}</span>
+            <span class="price-value price-placeholder">--</span>
+          </div>
+          <div class="price-box old">
+            <span class="price-label">${currentLang === 'ar' ? 'السعر القديم' : 'Old SYP'}</span>
+            <span class="price-value price-placeholder">--</span>
+          </div>
+        </div>
+      `;
+    }
     const oldSyp = price * 100;
     return `
       <div class="dual-price-wrapper">
@@ -563,12 +597,14 @@ window.openItemDetails = function (id) {
   }
 
   if (item.prices) {
-    // Show sizes + Initial Small price
-    const initialPrice = item.prices.small;
+    // Build price argument safely for onclick (handles '--' placeholder)
+    const pa = (p) => p === '--' ? `'--'` : p;
+    const xsPrice = item.prices.xsmall !== undefined ? item.prices.xsmall : '--';
     priceContainer.innerHTML = `
-        ${getPriceHtml(initialPrice)}
+        ${getPriceHtml(xsPrice)}
         <div class="size-selector">
-            <button class="size-btn active" data-size="small" onclick="updatePrice(${item.id}, 'small', ${item.prices.small}, this)">${currentLang === 'ar' ? 'صغير' : 'Small'}</button>
+            <button class="size-btn active" data-size="xsmall" onclick="updatePrice(${item.id}, 'xsmall', ${pa(xsPrice)}, this)">${currentLang === 'ar' ? 'صغير جداً' : 'X Small'}</button>
+            <button class="size-btn" data-size="small" onclick="updatePrice(${item.id}, 'small', ${item.prices.small}, this)">${currentLang === 'ar' ? 'صغير' : 'Small'}</button>
             <button class="size-btn" data-size="medium" onclick="updatePrice(${item.id}, 'medium', ${item.prices.medium}, this)">${currentLang === 'ar' ? 'وسط' : 'Medium'}</button>
             <button class="size-btn" data-size="large" onclick="updatePrice(${item.id}, 'large', ${item.prices.large}, this)">${currentLang === 'ar' ? 'كبير' : 'Large'}</button>
         </div>
@@ -618,19 +654,32 @@ window.updatePrice = function (id, size, price, button) {
   }
 
   // Update Dual Price Display
-  const oldSyp = price * 100;
   const wrapper = document.querySelector('.dual-price-wrapper');
   if (wrapper) {
-    wrapper.innerHTML = `
-      <div class="price-box new">
-        <span class="price-label">${currentLang === 'ar' ? 'السعر الجديد' : 'New SYP'}</span>
-        <span class="price-value">${formatPrice(price)}</span>
-      </div>
-      <div class="price-box old">
-        <span class="price-label">${currentLang === 'ar' ? 'السعر القديم' : 'Old SYP'}</span>
-        <span class="price-value">${formatPrice(oldSyp)}</span>
-      </div>
-    `;
+    if (price === '--') {
+      wrapper.innerHTML = `
+        <div class="price-box new">
+          <span class="price-label">${currentLang === 'ar' ? 'السعر الجديد' : 'New SYP'}</span>
+          <span class="price-value price-placeholder">--</span>
+        </div>
+        <div class="price-box old">
+          <span class="price-label">${currentLang === 'ar' ? 'السعر القديم' : 'Old SYP'}</span>
+          <span class="price-value price-placeholder">--</span>
+        </div>
+      `;
+    } else {
+      const oldSyp = price * 100;
+      wrapper.innerHTML = `
+        <div class="price-box new">
+          <span class="price-label">${currentLang === 'ar' ? 'السعر الجديد' : 'New SYP'}</span>
+          <span class="price-value">${formatPrice(price)}</span>
+        </div>
+        <div class="price-box old">
+          <span class="price-label">${currentLang === 'ar' ? 'السعر القديم' : 'Old SYP'}</span>
+          <span class="price-value">${formatPrice(oldSyp)}</span>
+        </div>
+      `;
+    }
   }
 };
 
@@ -788,44 +837,39 @@ function setupProScrollAnimation() {
         startAnimationLoop();
       }
     };
+    img.onerror = () => {
+      frames[index] = null;
+      imagesLoaded++;
+      if (imagesLoaded === frameCount) startAnimationLoop();
+    };
     img.src = `${framePath}${frameNum}.jpg`;
   }
 
-  // 2. RAF loop state — stopped by default, woken by scroll
+  // 2. RAF handle — shared between scroll listener and animation loop
   let rafId = null;
-  let loopActive = false;
 
-  function startLoop() {
-    if (!loopActive) {
-      loopActive = true;
-      rafId = requestAnimationFrame(render);
-    }
-  }
-
-  // Scroll listener wakes the loop and updates progress
-  window.addEventListener('scroll', () => {
-    const rect = container.getBoundingClientRect();
-    const progress = -rect.top / (rect.height - window.innerHeight);
-    scrollProgress = Math.max(0, Math.min(1, progress));
-    startLoop();
-  }, { passive: true });
-
-  // Pause the loop entirely when the hero section leaves the viewport
-  if (typeof IntersectionObserver !== 'undefined') {
-    new IntersectionObserver(entries => {
-      if (!entries[0].isIntersecting && rafId) {
-        cancelAnimationFrame(rafId);
-        rafId = null;
-        loopActive = false;
-      }
-    }, { threshold: 0 }).observe(container);
-  }
-
-  // 3. Render function — exits automatically once progress has settled
+  // 3. Render function — self-pauses when smoothedProgress has caught up
   function render() {
-    const delta = scrollProgress - smoothedProgress;
-    smoothedProgress += delta * lerpFactor;
+    const diff = scrollProgress - smoothedProgress;
 
+    if (Math.abs(diff) < 0.0008) {
+      // Snap exactly and do one final draw, then stop until next scroll event
+      smoothedProgress = scrollProgress;
+      const snap = Math.round(smoothedProgress * (frameCount - 1));
+      if (snap !== currentFrameIndex) {
+        currentFrameIndex = snap;
+        const frame = frames[currentFrameIndex];
+        if (frame) {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          ctx.drawImage(frame, 0, 0, canvas.width, canvas.height);
+        }
+      }
+      updateUIStates(smoothedProgress);
+      rafId = null;
+      return;
+    }
+
+    smoothedProgress += diff * lerpFactor;
     const targetFrame = Math.round(smoothedProgress * (frameCount - 1));
     if (targetFrame !== currentFrameIndex) {
       currentFrameIndex = targetFrame;
@@ -835,20 +879,40 @@ function setupProScrollAnimation() {
         ctx.drawImage(frame, 0, 0, canvas.width, canvas.height);
       }
     }
-
     updateUIStates(smoothedProgress);
-
-    if (Math.abs(delta) > 0.0005) {
-      rafId = requestAnimationFrame(render);
-    } else {
-      loopActive = false;
-      rafId = null;
-    }
+    rafId = requestAnimationFrame(render);
   }
 
-  // 4. Start the loop after images finish loading
+  // Menu reveal — runs independently of frame loading so pizza cards are never stuck hidden
+  function revealMenuSection(progress) {
+    const t = 0.8;
+    const r = progress > t ? (progress - t) / (1 - t) : 0;
+    menuSection.style.opacity = r;
+    menuSection.style.transform = `translateY(${(1 - r) * 150}px)`;
+    menuSection.style.zIndex = r > 0.9 ? "20" : "10";
+  }
+
+  // Handle browser scroll-restoration (user refreshes while scrolled past hero)
+  {
+    const initRect = container.getBoundingClientRect();
+    const initP = Math.max(0, Math.min(1, -initRect.top / (initRect.height - window.innerHeight)));
+    scrollProgress = initP;
+    revealMenuSection(initP);
+  }
+
+  // Optimized Scroll Listener — wakes the RAF loop only when needed
+  window.addEventListener('scroll', () => {
+    const rect = container.getBoundingClientRect();
+    const progress = -rect.top / (rect.height - window.innerHeight);
+    scrollProgress = Math.max(0, Math.min(1, progress));
+    revealMenuSection(scrollProgress);
+    if (!rafId && imagesLoaded === frameCount) {
+      rafId = requestAnimationFrame(render);
+    }
+  }, { passive: true });
+
   function startAnimationLoop() {
-    startLoop();
+    rafId = requestAnimationFrame(render);
   }
 
   function updateUIStates(progress) {
