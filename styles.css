@@ -304,7 +304,6 @@ h1, h2, h3 {
     justify-content: center;
     opacity: 1;
     transform: scale(1.1);
-    filter: drop-shadow(0 0 24px rgba(220, 38, 38, 0.2));
     will-change: transform;
 }
 
@@ -336,6 +335,7 @@ h1, h2, h3 {
     max-width: 92vw;
     z-index: 10;
     opacity: 0;
+    transition: transform 0.1s linear;
     will-change: transform, opacity;
     text-shadow:
         0 4px 24px rgba(0, 0, 0, 0.7),
@@ -371,7 +371,6 @@ h1, h2, h3 {
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.45) 0%, transparent 70%);
     border-radius: 50%;
     animation: steamPro 4s infinite ease-in-out;
-    filter: blur(6px);
     will-change: transform, opacity;
 }
 
@@ -403,7 +402,6 @@ h1, h2, h3 {
     pointer-events: none;
     overflow: hidden;
     z-index: -1;
-    contain: layout style paint;
 }
 
 /* Filter Tabs */
@@ -546,7 +544,6 @@ h1, h2, h3 {
     object-fit: cover;
     border-radius: 50%;
     transition: transform 0.5s var(--ease);
-    display: block;
 }
 
 .pizza-card:hover .pizza-img { transform: scale(1.1) rotate(4deg); }
@@ -880,18 +877,6 @@ h1, h2, h3 {
     display: block;
 }
 
-.price-placeholder {
-    background: none !important;
-    -webkit-background-clip: unset !important;
-    background-clip: unset !important;
-    -webkit-text-fill-color: var(--text-muted) !important;
-    color: var(--text-muted) !important;
-}
-
-.price-placeholder::after {
-    content: '' !important;
-}
-
 /* Size Selector */
 .size-selector {
     display: flex;
@@ -975,6 +960,12 @@ h1, h2, h3 {
     gap: 0.5rem;
 }
 
+.crust-img {
+    width: 100%;
+    max-height: 70px;
+    object-fit: contain;
+}
+
 .crust-btn:hover {
     border-color: var(--primary-light);
     background: rgba(220, 38, 38, 0.07);
@@ -988,19 +979,6 @@ h1, h2, h3 {
     box-shadow: 0 6px 18px var(--primary-glow);
 }
 
-.crust-img {
-    width: clamp(60px, 18vw, 90px);
-    height: clamp(60px, 18vw, 90px);
-    object-fit: contain;
-    border-radius: var(--radius-xs);
-    transition: transform 0.35s var(--ease);
-    pointer-events: none;
-}
-
-.crust-btn:hover .crust-img {
-    transform: scale(1.08);
-}
-
 /* ============================================
    FLOATING BACKGROUND ELEMENTS
    ============================================ */
@@ -1008,7 +986,7 @@ h1, h2, h3 {
     position: absolute;
     width: clamp(55px, 9vw, 110px);
     height: auto;
-    opacity: 0.07;
+    opacity: 0.08;
     animation: floatAround infinite ease-in-out;
     will-change: transform;
 }
@@ -1041,13 +1019,11 @@ h1, h2, h3 {
 }
 
 .map-card {
-    background: var(--bg-card);
+    background: var(--bg-card-solid);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: var(--glass-shadow);
-    backdrop-filter: var(--blur);
-    -webkit-backdrop-filter: var(--blur);
     transition: var(--transition);
 }
 
@@ -1079,13 +1055,11 @@ h1, h2, h3 {
 }
 
 .action-card {
-    background: var(--bg-card);
+    background: var(--bg-card-solid);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-xl);
     padding: clamp(1.25rem, 4vw, 2rem);
     text-align: center;
-    backdrop-filter: var(--blur);
-    -webkit-backdrop-filter: var(--blur);
     box-shadow: var(--glass-shadow);
     transition: var(--transition);
     display: flex;
@@ -1350,33 +1324,27 @@ h1, h2, h3 {
         padding: 1rem;
     }
 
-    /* Performance: remove steam particles on mobile */
-    .steam-container { display: none; }
-
-    /* Performance: lighter glow on animation box for mobile GPU */
-    .pizza-animation-box {
-        filter: drop-shadow(0 0 12px rgba(220, 38, 38, 0.15));
-    }
-
-    /* Performance: reduce nav blur on mobile */
+    /* Mobile perf: swap backdrop-filter for solid backgrounds */
     .nav-container {
-        -webkit-backdrop-filter: blur(14px);
-        backdrop-filter: blur(14px);
-    }
-
-    /* Performance: reduce filter tabs blur on mobile */
-    .filter-tabs {
-        -webkit-backdrop-filter: blur(14px);
-        backdrop-filter: blur(14px);
-    }
-
-    /* Performance: remove heavy backdrop-filter from static contact cards */
-    .map-card,
-    .action-card {
+        background: rgba(5, 5, 7, 0.96);
         -webkit-backdrop-filter: none;
         backdrop-filter: none;
-        background: var(--bg-elevated);
     }
+    .filter-tabs {
+        background: rgba(5, 5, 7, 0.98);
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+
+    /* Disable heavy animations on mobile */
+    .steam-container { display: none; }
+    .floating-item { display: none; }
+
+    /* Remove blend mode on mobile nav logo */
+    .nav-logo { mix-blend-mode: normal; }
+
+    /* Fix image sizes for animated canvas to prevent layout shifts */
+    #pizzaCanvas { width: 100%; height: 100%; }
 }
 
 @media (max-width: 380px) {
