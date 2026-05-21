@@ -427,38 +427,68 @@ function init() {
 }
 
 /**
- * Dynamically generate high-density floating background elements
+ * Restore 50 mushroom + 50 pepper floating background elements (100 total).
+ * Elements use CSS custom properties for per-element randomization so the
+ * single `floatVeg` keyframe covers all variation without JS per-frame work.
+ * Animation is paused via IntersectionObserver when the section is off-screen.
  */
 function setupFloatingBackground() {
   const container = document.getElementById('floatingBg');
   if (!container) return;
 
-  const isMobile = window.innerWidth < 768;
-  const count = isMobile ? 12 : 25;
-  const fragments = document.createDocumentFragment();
+  const MUSHROOM_COUNT = 50;
+  const PEPPER_COUNT = 50;
+  const fragment = document.createDocumentFragment();
 
-  for (let i = 0; i < count; i++) {
-    const item = document.createElement('img');
-    const isMushroom = Math.random() > 0.5;
+  function createFloatingItem(type) {
+    const img = document.createElement('img');
+    img.src = type === 'mushroom' ? 'images/bg/mushroom.png' : 'images/bg/pepper.png';
+    img.className = `floating-item ${type}`;
+    img.alt = '';
+    img.setAttribute('aria-hidden', 'true');
 
-    item.src = isMushroom ? 'images/bg/mushroom.png' : 'images/bg/pepper.png';
-    item.className = `floating-item ${isMushroom ? 'mushroom' : 'pepper'}`;
+    // Position: set once at creation, never mutated by JS or animated in keyframes
+    img.style.left = `${(Math.random() * 98).toFixed(2)}%`;
+    img.style.top  = `${(Math.random() * 98).toFixed(2)}%`;
 
-    // Randomize positioning
-    const top = Math.random() * 100;
-    const left = Math.random() * 100;
-    const delay = Math.random() * -20; // Negative delay so they start at different states
-    const duration = 15 + Math.random() * 20; // 15s to 35s
+    // CSS variables — consumed by the floatVeg keyframe, not read by JS again
+    const scale     = (0.5 + Math.random() * 0.9).toFixed(3);
+    const rotate    = Math.floor(Math.random() * 360);
+    const rotateMid = rotate + Math.floor(Math.random() * 40 - 20);
+    const tx        = Math.floor(Math.random() * 36 - 18);   // -18 … +17 px
+    const ty        = Math.floor(Math.random() * 44 - 36);   // -36 … +7 px (mostly up)
+    const duration  = (15 + Math.random() * 20).toFixed(1);  // 15s … 35s
+    const delay     = -(Math.random() * 30).toFixed(1);       // negative = pre-started
 
-    item.style.top = `${top}%`;
-    item.style.left = `${left}%`;
-    item.style.animationDelay = `${delay}s`;
-    item.style.animationDuration = `${duration}s`;
+    img.style.setProperty('--scale',      scale);
+    img.style.setProperty('--rotate',     `${rotate}deg`);
+    img.style.setProperty('--rotate-mid', `${rotateMid}deg`);
+    img.style.setProperty('--tx',         `${tx}px`);
+    img.style.setProperty('--ty',         `${ty}px`);
+    img.style.setProperty('--duration',   `${duration}s`);
+    img.style.setProperty('--delay',      `${delay}s`);
 
-    fragments.appendChild(item);
+    return img;
   }
 
-  container.appendChild(fragments);
+  for (let i = 0; i < MUSHROOM_COUNT; i++) fragment.appendChild(createFloatingItem('mushroom'));
+  for (let i = 0; i < PEPPER_COUNT;   i++) fragment.appendChild(createFloatingItem('pepper'));
+
+  container.appendChild(fragment);
+
+  // Pause all 100 animations when the menu section scrolls off-screen.
+  // One class toggle on the container is cheaper than 100 style mutations.
+  if (typeof IntersectionObserver !== 'undefined') {
+    const menuSection = document.querySelector('.menu-section');
+    if (menuSection) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          container.classList.toggle('animation-paused', !entry.isIntersecting);
+        });
+      }, { threshold: 0 });
+      observer.observe(menuSection);
+    }
+  }
 }
 
 

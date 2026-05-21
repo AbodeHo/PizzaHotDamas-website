@@ -1005,22 +1005,52 @@ h1, h2, h3 {
    FLOATING BACKGROUND ELEMENTS
    ============================================ */
 .floating-item {
+    --opacity-low: 0.07;
+    --opacity-high: 0.16;
     position: absolute;
-    width: clamp(55px, 9vw, 110px);
-    height: auto;
-    opacity: 0.07;
-    animation: floatAround infinite ease-in-out;
-    will-change: transform;
+    width: 30px;
+    height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+    object-fit: contain;
+    pointer-events: none;
+    will-change: transform, opacity;
+    animation: floatVeg var(--duration, 22s) ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
 }
 
-.floating-item.mushroom { width: clamp(45px, 7.5vw, 95px); }
-.floating-item.pepper { width: clamp(65px, 10vw, 125px); }
+.floating-item.mushroom {
+    width: 26px;
+    height: 26px;
+    max-width: 26px;
+    max-height: 26px;
+}
 
-@keyframes floatAround {
-    0%   { transform: translate(0, 0) rotate(0deg) scale(1); }
-    33%  { transform: translate(28px, 45px) rotate(10deg) scale(1.04); }
-    66%  { transform: translate(-18px, 90px) rotate(-5deg) scale(0.96); }
-    100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+.floating-item.pepper {
+    width: 32px;
+    height: 32px;
+    max-width: 32px;
+    max-height: 32px;
+}
+
+/* Paused when section is off-screen (set via JS IntersectionObserver) */
+.floating-bg.animation-paused .floating-item {
+    animation-play-state: paused;
+}
+
+@keyframes floatVeg {
+    0% {
+        transform: translate3d(0, 0, 0) scale(var(--scale, 1)) rotate(var(--rotate, 0deg));
+        opacity: var(--opacity-low);
+    }
+    50% {
+        transform: translate3d(var(--tx, 18px), var(--ty, -28px), 0) scale(var(--scale, 1)) rotate(var(--rotate-mid, 15deg));
+        opacity: var(--opacity-high);
+    }
+    100% {
+        transform: translate3d(0, 0, 0) scale(var(--scale, 1)) rotate(var(--rotate, 0deg));
+        opacity: var(--opacity-low);
+    }
 }
 
 /* ============================================
@@ -1376,6 +1406,29 @@ h1, h2, h3 {
         -webkit-backdrop-filter: none;
         backdrop-filter: none;
         background: var(--bg-elevated);
+    }
+
+    /* Floating items: smaller, slower, lower opacity on mobile */
+    .floating-item {
+        --opacity-low: 0.03;
+        --opacity-high: 0.07;
+        width: 16px;
+        height: 16px;
+        max-width: 16px;
+        max-height: 16px;
+        animation-duration: calc(var(--duration, 22s) * 1.6);
+    }
+    .floating-item.mushroom {
+        width: 14px;
+        height: 14px;
+        max-width: 14px;
+        max-height: 14px;
+    }
+    .floating-item.pepper {
+        width: 18px;
+        height: 18px;
+        max-width: 18px;
+        max-height: 18px;
     }
 }
 
