@@ -14,7 +14,7 @@ const menuData = [
     name_en: "Four Seasons",
     desc_ar: "فليفلة، بندورة، زيتون، فطر",
     desc_en: "Peppers, Tomatoes, Olives, Mushrooms",
-    prices: { xsmall: "350", small: 600, medium: 850, large: 1200 },
+    prices: { xsmall: "350", small: 650, medium: 930, large: 1300 },
     image: "images/pizzas/فصول.jpg"
   },
   {
@@ -24,7 +24,7 @@ const menuData = [
     name_en: "Mushroom",
     desc_ar: "صوص، جبنة، فطر",
     desc_en: "Sauce, Cheese, Mushroom",
-    prices: { xsmall: "350", small: 600, medium: 850, large: 1200 },
+    prices: { xsmall: "350", small: 650, medium: 930, large: 1300 },
     image: "images/pizzas/mushroom.png"
   },
   {
@@ -34,7 +34,7 @@ const menuData = [
     name_en: "Corn",
     desc_ar: "صوص، جبنة، ذرة",
     desc_en: "Sauce, Cheese, Corn",
-    prices: { xsmall: "350", small: 600, medium: 850, large: 1200 },
+    prices: { xsmall: "350", small: 650, medium: 930, large: 1300 },
     image: "images/pizzas/ذرة.jpg"
   },
   {
@@ -44,7 +44,7 @@ const menuData = [
     name_en: "Margherita",
     desc_ar: "صوص، جبنة",
     desc_en: "Sauce, Cheese",
-    prices: { xsmall: "350", small: 600, medium: 850, large: 1200 },
+    prices: { xsmall: "350", small: 650, medium: 930, large: 1300 },
     image: "images/pizzas/مرغريتا.jpg"
   },
   {
@@ -54,7 +54,7 @@ const menuData = [
     name_en: "Four Cheese",
     desc_ar: "أربع أنواع جبنة (بلو تشيز، بارميزان، تشيدر، موزاريلا)",
     desc_en: "Four types of cheese (Blue cheese, Parmesan, Cheddar, Mozzarella)",
-    prices: { xsmall: "450", small: 750, medium: 1100, large: 1500 },
+    prices: { xsmall: "450", small: 800, medium: 1180, large: 1600 },
     image: "images/pizzas/فورتشيز.jpg"
   },
 
@@ -66,7 +66,7 @@ const menuData = [
     name_en: "Shish Taouk",
     desc_ar: "صوص، جبنة، شيش طاووق",
     desc_en: "Sauce, Cheese, Shish Taouk",
-    prices: { xsmall: "450", small: 750, medium: 1100, large: 1500 },
+    prices: { xsmall: "450", small: 800, medium: 1180, large: 1600 },
     image: "images/pizzas/شيش.jpg"
   },
   {
@@ -76,7 +76,7 @@ const menuData = [
     name_en: "BBQ",
     desc_ar: "صوص الباربيكيو، جبنة، قطع دجاج، فطر",
     desc_en: "BBQ Sauce, Cheese, Chicken chunks, Mushroooms",
-    prices: { xsmall: "450", small: 750, medium: 1100, large: 1500 },
+    prices: { xsmall: "450", small: 800, medium: 1180, large: 1600 },
     image: "images/pizzas/باربكيو.jpg"
   },
   {
@@ -86,7 +86,7 @@ const menuData = [
     name_en: "Mexican",
     desc_ar: "صوص، جبنة، قطع دجاج حارة، فليفلة، بصل، بهارات مكسيكي",
     desc_en: "Sauce, Cheese, Spicy chicken, Peppers, Onions, Mexican spices",
-    prices: { xsmall: "450", small: 750, medium: 1100, large: 1500 },
+    prices: { xsmall: "450", small: 800, medium: 1180, large: 1600 },
     image: "images/pizzas/مكسيكي.jpg"
   },
   {
@@ -96,7 +96,7 @@ const menuData = [
     name_en: "Ranch (Normal or Spicy)",
     desc_ar: "صوص الرانش، جبنة، قطع دجاج، حبش مدخن",
     desc_en: "Ranch Sauce, Cheese, Chicken chunks, Smoked Turkey",
-    prices: { xsmall: "450", small: 750, medium: 1100, large: 1500 },
+    prices: { xsmall: "450", small: 800, medium: 1180, large: 1600 },
     image: "images/pizzas/ranch pizza.png"
   },
 
@@ -108,7 +108,7 @@ const menuData = [
     name_en: "Sausage",
     desc_ar: "صوص، جبنة، فطر، سجق",
     desc_en: "Sauce, Cheese, Mushroom, Sausage",
-    prices: { xsmall: "450", small: 750, medium: 1100, large: 1500 },
+    prices: { xsmall: "450", small: 800, medium: 1180, large: 1600 },
     image: "images/pizzas/سجق.jpg"
   },
   {
@@ -118,7 +118,7 @@ const menuData = [
     name_en: "Philadelphia Steak",
     desc_ar: "صوص الفيلادلفيا، جبنة، بصل، شرائح لحمة، فطر فريش، فليفلة",
     desc_en: "Philadelphia Sauce, Cheese, Onion, Meat slices, Fresh Mushroom, Peppers",
-    prices: { xsmall: "450", small: 750, medium: 1100, large: 1500 },
+    prices: { xsmall: "450", small: 800, medium: 1180, large: 1600 },
     image: "images/pizzas/philadelphia.png"
   },
   {
@@ -128,7 +128,7 @@ const menuData = [
     name_en: "Supreme",
     desc_ar: "صوص، جبنة، لحم مفروم، بيبيروني، فطر، فليفلة، زيتون",
     desc_en: "Sauce, Cheese, Minced meat, Pepperoni, Mushroom, Peppers, Olives",
-    prices: { xsmall: "450", small: 750, medium: 1100, large: 1500 },
+    prices: { xsmall: "450", small: 800, medium: 1180, large: 1600 },
     image: "images/pizzas/سوبريم.jpg"
   },
 
@@ -140,7 +140,7 @@ const menuData = [
     name_en: "Salami",
     desc_ar: "صوص، جبنة، سلامي",
     desc_en: "Sauce, Cheese, Salami",
-    prices: { xsmall: "400", small: 700, medium: 1050, large: 1400 },
+    prices: { xsmall: "400", small: 750, medium: 1100, large: 1500 },
     image: "images/pizzas/سلامي.jpg"
   },
   {
@@ -150,7 +150,7 @@ const menuData = [
     name_en: "Pepperoni",
     desc_ar: "صوص، جبنة، بيبيروني",
     desc_en: "Sauce, Cheese, Pepperoni",
-    prices: { xsmall: "400", small: 700, medium: 1050, large: 1400 },
+    prices: { xsmall: "400", small: 750, medium: 1100, large: 1500 },
     image: "images/pizzas/ببروني.jpg"
   },
   {
@@ -160,7 +160,7 @@ const menuData = [
     name_en: "Hot Dog",
     desc_ar: "صوص، جبنة، هوت دوغ",
     desc_en: "Sauce, Cheese, Hot Dog",
-    prices: { xsmall: "400", small: 700, medium: 1050, large: 1400 },
+    prices: { xsmall: "400", small: 750, medium: 1100, large: 1400 },
     image: "images/pizzas/هةت دوغ.jpg"
   },
   {
@@ -170,7 +170,7 @@ const menuData = [
     name_en: "Smoked Turkey",
     desc_ar: "صوص، جبنة، حبش مدخن",
     desc_en: "Sauce, Cheese, Smoked Turkey",
-    prices: { xsmall: "400", small: 700, medium: 1050, large: 1400 },
+    prices: { xsmall: "400", small: 750, medium: 1100, large: 1500 },
     image: "images/pizzas/حبش.jpg"
   },
   {
@@ -180,7 +180,7 @@ const menuData = [
     name_en: "Smoked Beef Roast",
     desc_ar: "صوص، جبنة، روستو بقر",
     desc_en: "Sauce, Cheese, Smoked Beef Roast",
-    prices: { xsmall: "400", small: 700, medium: 1050, large: 1400 },
+    prices: { xsmall: "400", small: 750, medium: 1100, large: 1500 },
     image: "images/pizzas/سلامي.jpg"
   },
   {
@@ -190,7 +190,7 @@ const menuData = [
     name_en: "Mixed Cold Meats",
     desc_ar: "صوص، جبنة، سلامي، بيبيروني، هوت دوغ، حبش مدخن",
     desc_en: "Sauce, Cheese, Salami, Pepperoni, Hot Dog, Smoked Turkey",
-    prices: {  small: 800, medium: 1200, large: 1600 },
+    prices: {  small: 850, medium: 1260, large: 1700 },
     image: "images/pizzas/لحومات باردة.jpg"
   },
 
@@ -202,7 +202,7 @@ const menuData = [
     name_en: "Half and Half Pizza",
     desc_ar: "حسب الطلب",
     desc_en: "As per order",
-    prices: {  small: 750, medium: 1100, large: 1500 },
+    prices: {  small: 800, medium: 1180, large: 1600 },
     image: "images/pizzas/مشكلة.jpg"
   },
   {
@@ -212,7 +212,7 @@ const menuData = [
     name_en: "Third and Third Pizza",
     desc_ar: "صوص، جبنة، هوت دوغ، شيش، سجق",
     desc_en: "Sauce, Cheese, Hot Dog, Shish, Sausage",
-    prices: { small: 800, medium: 1200, large: 1600 },
+    prices: { small: 850, medium: 1260, large: 1700 },
     image: "images/pizzas/كل تلت شكل.jpg"
   },
   {
@@ -222,7 +222,7 @@ const menuData = [
     name_en: "Quarter and Quarter Pizza",
     desc_ar: "صوص، جبنة، هوت دوغ، حبش، بيبيروني، ذرة",
     desc_en: "Sauce, Cheese, Hot Dog, Turkey, Pepperoni, Corn",
-    prices: { small: 800, medium: 1200, large: 1600 },
+    prices: { small: 850, medium: 1260, large: 1700 },
     image: "images/pizzas/مشكلة.jpg"
   },
   {
@@ -232,7 +232,7 @@ const menuData = [
     name_en: "Hot Meats (Third and Third)",
     desc_ar: "حسب الطلب",
     desc_en: "As per order",
-    prices: { small: 850, medium: 1300, large: 1700 },
+    prices: { small: 900, medium: 1360, large: 1800 },
     image: "images/pizzas/كل تلت شكل.jpg"
   },
 
@@ -244,7 +244,7 @@ const menuData = [
     name_en: "Cheese Fries",
     desc_ar: "بطاطا، جبنة موزاريلا، صوص أبيض، بهارات",
     desc_en: "Fries, Mozzarella, White sauce, Spices",
-    price: 400,
+    price: 450,
     image: "images/pizzas/بطاطا بالجبنة.JPG"
   },
   {
@@ -254,7 +254,7 @@ const menuData = [
     name_en: "BBQ Fries",
     desc_ar: "بطاطا، جبنة موزاريلا، صوص باربيكيو، صوص أبيض",
     desc_en: "Fries, Mozzarella, BBQ sauce, White sauce",
-    price: 450,
+    price: 500,
     image: "images/pizzas/بطاطا باربكيو.png"
   },
   {
@@ -264,7 +264,7 @@ const menuData = [
     name_en: "Plain Fries",
     desc_ar: "بطاطا مقلية",
     desc_en: "Fried potatoes",
-    price: 300,
+    price: 350,
     image: "images/pizzas/بطاطا.JPG"
   },
   {
@@ -296,7 +296,7 @@ const menuData = [
     name_en: "Caesar Salad",
     desc_ar: "خس، توست، دجاج، صوص سيزر، جبنة بارميزان",
     desc_en: "Lettuce, Toast, Chicken, Caesar sauce, Parmesan cheese",
-    price: 450,
+    price: 500,
     image: "images/pizzas/سيزر.jpg"
   },
 
@@ -318,7 +318,7 @@ const menuData = [
     name_en: "BBQ Sauce",
     desc_ar: "",
     desc_en: "",
-    price: 70,
+    price: 80,
     image: "images/pizzas/صوص باربكيو.jpg"
   },
   {
@@ -328,7 +328,7 @@ const menuData = [
     name_en: "Ranch Sauce",
     desc_ar: "",
     desc_en: "",
-    price: 70,
+    price: 80,
     image: "images/pizzas/ranch.jpg"
   },
   {
@@ -338,7 +338,7 @@ const menuData = [
     name_en: "Buffalo Sauce",
     desc_ar: "",
     desc_en: "",
-    price: 70,
+    price: 80,
     image: "images/pizzas/buffalo.png"
   },
   {
@@ -348,7 +348,7 @@ const menuData = [
     name_en: "Caesar Sauce",
     desc_ar: "",
     desc_en: "",
-    price: 70,
+    price: 80,
     image: "images/pizzas/caesar.jpg"
   },
 
@@ -360,7 +360,7 @@ const menuData = [
     name_en: "Soft Drink 330ml",
     desc_ar: "كوكاكولا، فانتا، سبرايت",
     desc_en: "Coca Cola, Fanta, Sprite",
-    price: 80,
+    price: 100,
     image: "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?q=80&w=1829&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
