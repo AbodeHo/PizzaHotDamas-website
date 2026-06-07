@@ -1036,9 +1036,9 @@ function setupCategoryScrollSpy() {
  */
 const branchConfig = {
   malki: {
-    lat: 33.513412554802834,
-    lng: 36.274720239021704,
-    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6653.074670898194!2d36.274720239021704!3d33.513412554802834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1518e74d1f8f9b4b%3A0xc0f494ee8cb65f84!2sPizza%20hot!5e0!3m2!1sen!2sin!4v1773497156508!5m2!1sen!2sin"
+    lat: 33.51626303664733,
+    lng: 36.27469216932072,
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1069.9995473892118!2d36.27469216932072!3d33.51626303664733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1518e74d1f8f9b4b%3A0xc0f494ee8cb65f84!2sPizza%20hot!5e0!3m2!1sen!2sin!4v1780813941424!5m2!1sen!2sin"
   },
   midan: {
     lat: 33.49325620921114,
